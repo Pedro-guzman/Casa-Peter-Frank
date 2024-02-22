@@ -1,0 +1,61 @@
+{% load static %}
+<!---->
+<div class="menu-fixed">
+    <!---->
+    <nav class="nav-menu nav">
+        <!---->
+        <div class="logo">
+            <a href="{% url 'index' %}"><img src="{% static 'img/imagen-principal.jpeg' %}" alt="Logo">Casa Peter Frank</a>
+        </div>
+        <div class="main-menu">
+            <ul class="main-menu">
+                <li><a href="{% url 'index' %}">Nosotros</a></li>
+                <li>
+                    <a href="#"><i class="bi bi-caret-down-fill icon-menu"></i>Servicios</a>
+                    <ul>
+                        <li><a href="{% url 'cortes' %}">Cortes</a></li>
+                        <li><a href="{% url 'barba' %}">Arreglo de barba</a></li>
+                        <li><a href="{% url 'contornos' %}">Limpieza de contornos</a></li>
+                        <li><a href="{% url 'ceja' %}">Arreglo de ceja</a></li>
+                        <li><a href="{% url 'mascarilla' %}">Mascarillas</a></li>
+                    </ul>
+                <li>
+                    <a href="#"><i class="bi bi-caret-down-fill icon-menu"></i>Productos</a>
+                    <ul>
+                        <li><a href="{% url 'pomada' %}">Pomadas</a></li>
+                        <li><a href="{% url 'after' %}">Aftershave</a></li>
+                        <li><a href="{% url 'shampoo' %}">Shampoo</a></li>
+                        <li><a href="{% url 'aceites' %}">Aceites</a></li>
+                        <li><a href="{% url 'talco' %}">Talco</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="bi bi-caret-down-fill icon-menu"></i>Contacto</a>
+                    <ul>
+                        <li><a href="{% url 'citas' %}">Agenda tu cita</a></li>
+                        <li><a href="{% url 'redes' %}">Redes sociales</a></li>
+                        <li><a href="{% url 'mensaje' %}">Contactanos</a></li>
+                        <li><a href="{% url 'ubicacion' %}">Cómo llegar</a></li>
+                    </ul>
+                </li>
+                </li>
+            </ul>
+
+
+        </div>
+        <!--Botos de registro e inicio de sesión-->
+        <div class="get-started">
+            <a href="{% url 'formStart' %}">
+                <button class="btn-sec-s">Empezar</button>
+            </a>
+
+        </div>
+        <div class="sing-in">
+            <a href="{% url 'formSing' %}">
+                <button class=" btn-sec">Iniciar sesion</button>
+
+            </a>
+        </div>
+        <!---->
+    </nav>
+</div>

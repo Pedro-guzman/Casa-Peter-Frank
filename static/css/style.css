@@ -1,0 +1,494 @@
+/* Definición de variables de color y tamaño de letra para reutilización */
+:root {
+    /* Variables de color */
+    --color-text: white; /* Define una variable para el color del texto */
+    --color-boton: rgb(235, 166, 5);
+    --background-menu: rgba(0, 0, 0, 0.5);
+    /* Variables de tamaño de letra */
+    /* (Puedes definir más variables de tamaño de letra aquí si es necesario) */
+
+    /* Variables para botones */
+    --boton-principal: ; /* Define una variable para el estilo del botón principal */
+}
+
+/* Estilos generales para el cuerpo del documento */
+body {
+    display: grid; /* Establece el cuerpo como un grid layout */
+    margin: 0; /* Elimina los márgenes predeterminados */
+    padding: 0; /* Elimina el relleno predeterminado */
+    height: 100%; /* Establece la altura del cuerpo al 100% de la ventana */
+}
+
+/* Estilos generales para las secciones */
+section {
+    height: 100vh; /* Establece la altura de las secciones al 100% del viewport height */
+}
+
+/* Estilos generales para todos los elementos */
+* {
+    box-sizing: border-box; /* Establece el modelo de caja de todos los elementos como border-box */
+    margin: 0; /* Elimina los márgenes predeterminados */
+    padding: 0; /* Elimina el relleno predeterminado */
+}
+
+/* Estilos específicos para el header */
+.header {
+    display: flex; /* Establece el header como un flex container */
+    flex-flow: column nowrap; /* Establece la dirección del flujo y flex-wrap del header */
+}
+/* Estilos del men´ú de navegacion. */
+/* Estilos para un menú fijo en la parte superior */
+.menu-fixed {
+    position: fixed; /* Establece la posición del menú como fija para que permanezca en la parte superior de la ventana incluso cuando se desplaza */
+    width: 100%; /* Establece el ancho del menú al 100% del contenedor principal */
+    margin-left: 0; /* Elimina cualquier margen izquierdo que pueda haber para asegurarse de que el menú esté alineado correctamente */
+}
+
+/* Estilos para la barra de navegación */
+
+/* Estilos para el menú de navegación */
+.nav-menu {
+    background-color: var(--background-menu); /* Establece el color de fondo del menú de navegación utilizando una variable CSS */
+    align-items: center; /* Centra verticalmente los elementos hijos dentro del menú de navegación */
+    display: flex; /* Establece el menú de navegación como un contenedor flex para que sus elementos hijos se alineen en una sola fila */
+    width: 100%; /* Establece el ancho del menú de navegación al 100% del contenedor principal */
+    border-bottom: solid 1px #ddd; /* Agrega un borde inferior sólido de 1px al menú de navegación */
+    justify-content: space-around;
+}
+
+/* Estilos para el logotipo en el menú de navegación */
+.logo {
+    width: auto; /* Establece el ancho del logotipo a 30px */
+    display: inline-block;
+}  
+
+/* Estilos para el enlace dentro del logotipo en el menú de navegación */
+.logo a {
+    width: 30px; /* Establece el ancho del enlace dentro del logotipo a 30px */
+    font-size: 1rem; /* Establece el tamaño de fuente del enlace dentro del logotipo a 1rem */
+    color: var(--color-boton); /* Establece el color del texto del enlace dentro del logotipo */
+    text-decoration: none; /* Elimina la subrayado del enlace dentro del logotipo */
+}
+.logo a:hover {
+    color: var(--color-text);
+}
+
+/* Estilos para la imagen dentro del logotipo en el menú de navegación */
+.logo img {
+    padding: 15px; /* Agrega relleno alrededor de la imagen del logotipo */
+    width: 100px; /* Establece el ancho de la imagen del logotipo a 70px */
+    height: 100px; /* Establece la altura de la imagen del logotipo a 60px */
+    border-radius: 50%;
+}
+img:hover {
+    
+}
+.main-menu  {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/*Estilos de las anclas y los elementos de lista del menú oculto*/
+.nav-menu .main-menu li a {
+    text-decoration: none;
+    font-size: 14px;
+}
+.nav-menu .main-menu li {
+    font-size: 0.75rem;
+    display: inline-block;
+    position: relative;
+    color: var(--color-text);
+}
+.nav-menu .main-menu li a {
+    display: block;
+    padding: 10px;
+    color: var(--color-text);
+    transition: background-color 0.5 ease;
+}
+.nav-menu .main-menu li a:hover {
+    background-color: var(--background-menu);
+    text-decoration: underline;
+    border-radius: 5px;
+}
+.nav-menu .main-menu li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--background-menu);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+    padding: 0;
+    margin: 0;
+}
+.nav-menu .main-menu li ul li {
+    display: block;
+}
+.nav-menu .main-menu li ul li a {
+    padding: 10px;
+    color: var(--color-text);
+    text-decoration: none;
+    display: block;
+}
+.nav-menu .main-menu li ul li a:hover {
+    background-color:  var(--background-menu);
+}
+.nav-menu .main-menu li:hover ul {
+    display: block;
+}
+/*Aquí inician los estilos de los botones para registro e inicio de sesión.*/
+.btn-sec-s { /*Estilos del botón Empezar*/
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: var(--color-boton);
+    color: white;
+    border: none;
+    border: solid 2px var(--color-boton);
+    font-size: 14px;
+}
+.btn-sec-s a {
+    text-decoration: none;
+    color: white;
+}
+.btn-sec-s:hover, a:hover {
+    background-color: transparent;
+    color: var(--color-text);
+}
+/**/
+/*Inicio de los estilos del botón Iniciar*/
+.btn-sec {
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: transparent;
+    border: solid 1px transparent;
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 14px;
+}
+.btn-sec a { /*Ingresamos al ancla el botón Iniciar para darle estilos.*/
+    text-decoration: none;
+    color: var(--color-boton);
+}
+.btn-sec:hover {
+    background-color: var(--color-boton);
+    border: solid 1px var(--color-boton);
+    color: white;
+}
+.btn-sec a:hover {
+    color: white;
+}
+
+/**/
+/**/
+
+/**/
+/**/
+/**/
+i {
+    margin-right: 5px;
+}
+/**/
+/**/
+
+/*Aquí estan los estilos de la seccion de inicio*/
+.cont-img {
+    position: static;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.cont-img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+/*Estilos de los textos de las imagenes de los destinos*/
+.overlay-text {
+    position: absolute;
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Centra completamente */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    color: white; /* Color del texto */
+    padding: 10px; /* Espaciado interior */
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+}
+/*Estilos del boton de destinos*/
+.btn-d{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: var(--color-boton);padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid var(--color-boton);
+}
+.btn-d:hover, a:hover {
+    background-color: transparent;
+    color: var(--color-boton);
+}
+/**/
+
+
+/*Estilos de footer*/
+.footer {
+    align-items: center;
+    height: 80px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    background-color:  #fbf5f5;
+    border-top: solid 1px #ddd;
+}
+/*aquí se aplican los estilos a las anclas del footer*/
+.pie {
+    text-align: center;
+}
+.pie a {
+    text-decoration: none;
+    color: var(--color-boton);
+    font-size: 11px;
+    padding: 0 10px;
+    letter-spacing: 2px;
+}
+.pie a:hover {
+    color: #c7c5c5;
+    text-decoration: underline
+}
+
+/*Aquí estan los estilos de terminos y condiciones y aviso de privacidad*/
+
+.terminos, .aviso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 90vh;
+    margin: auto;
+    padding: 100px;
+}
+.terminos, .aviso, h2 {
+    font-size: 20px;
+    margin: 20px;
+}
+.terminos, .aviso p {
+    font-size: 10px;
+}
+
+
+
+/*Estilos del formulario de registro e inicio de sesión*/
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 450px;
+    min-height: 80vh;
+    padding: 50px;
+}
+/*Estilo de los botones del formulario de registro.*/
+.botones {
+    display: flex;
+    gap: 20px;
+    align-self: flex-start;
+    align-items: center;
+    margin: auto;
+    align-content: space-around;
+}
+.google-btn {
+    display: flex;
+    height: 40px;
+    background-color: var(--color-boton);
+    color: var(--color-text);
+    border: none;
+    border-radius: 5px;
+    padding: 2px;
+    align-items: center;
+    border: solid 2px var(--color-boton);
+}
+.google-btn:hover {  /*opacidad al posicionar el puntero sobre el botón*/
+    cursor: pointer;
+    background-color: rgb(35, 121, 241);
+
+   
+
+}
+/*Estilos del logo de google que se encuentra en el botón*/
+.google-btn picture {
+    display: flex;
+    width: 36px;
+    height: 36px;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+  
+}
+.google-btn picture img {
+    width: 75%;
+}
+.google-btn span {
+    color: #fff;
+    padding: 15px;
+}
+/*Estilos del boton Twiter.*/
+.twiter-btn {
+    display: flex;
+    height: 40px;
+    color: #ccc;
+    background-color: #eee;
+    border: none;
+    width: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+}
+.twiter-btn:hover {
+    background-color: #ddd;
+}
+.teiter-btn picture {
+    display: flex;
+    width: 36px;
+    height: 36px;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+  
+}
+.twiter-btn picture img {
+    width: 75%;
+    
+}
+/*Estilos de la linea divisora.*/
+.separator {
+    display: flex;
+    width: 100%;
+    gap: 15px;
+}
+.separator hr {
+    flex-grow: 1;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+.separator span {
+    color: #8b8b8b;
+}
+/**/
+/*Estilos de los inputs del formulario*/
+/**/
+.section-inputs {
+    display: flex;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+}
+label {
+    background-color: transparent;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    gap: 5px;
+}
+label span {
+    font-weight: 700;
+}
+.section-inputs label input {
+    width: 80%;
+    background-color: #f3f3f4;
+    border: none;
+    padding: 10px 20px;
+    outline: none;
+    font-size: 14px;
+    border-radius: 10px;
+    border: solid 2px transparent;
+    
+}
+
+label input {
+    display: flex;
+    width: 90%;
+    background-color: #f3f3f4;
+    border: none;
+    padding: 10px 20px;
+    outline: none;
+    font-size: 13px;
+    border-radius: 10px;
+    transition: background-color 0.3s, border 0.2s;
+    border: solid 2px transparent;
+}
+label input:hover {
+    border: solid 2px #f3f3f4;
+    box-shadow: 0 0 4px #8b8b8b;
+}
+label input:focus {
+    background-color: #fff;
+    border: solid 4px #f3f3f4;
+    
+}
+.checkbox-label {
+    display: flex;
+    margin: 10px;
+}
+.checkbox-label input[type="checkbox"] {
+    width: 20px;
+    margin: 10px;
+}
+.checkbox-label span {
+    font-weight: 400;
+}
+.submit-btn {
+    width: 100%;
+    background-color: var(--color-boton);
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    border: 2px solid var(--color-boton);
+
+}
+.submit-btn:hover {
+    background-color: transparent;
+    opacity: 0.75;
+    color: var(--color-boton);
+    font-weight: 700;
+}
+/**/
+/*Estilos del formulario de contacto*/
+/**/
+.cont {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+}
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Estilos del mensaje de envio de los formularios */
+.style-mensaje {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 300px;
+    min-height: 85vh;
+}
+
