@@ -1,0 +1,18 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+<section>
+     <!--texto con descripción -->
+     <div class="overlay-text">
+        <h2>Ajenda tu cita.</h2>
+
+        <form class="form" action="" method="POST">
+            {% csrf_token %}
+                
+                {{ form.as_p}}
+            <input type="submit" value="Agendar">
+        </form>
+    </div>
+    
+</section>
+{% endblock %}

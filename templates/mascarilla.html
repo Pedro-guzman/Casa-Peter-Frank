@@ -1,0 +1,17 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+<section>
+    <div class="cont-img" id="nosotros">
+        <img src="{% static 'img/' %}">
+    </div>
+     <!--texto con descripción -->
+     <div class="overlay-text">
+        <h2>Aplicación de mascarilla negra</h2>
+         <p>Aplicación de mascarilla negra, ideal para exfoliar, remueve puntos negros superficiales y piel muerta..<span id="textoOculto" style="display:none;">Nuestro compromiso es llevarte a los mejores destinos naconales e internacionales, contamos con mas de 20 años de experiencia.</span> <a href="#" id="enlaceLeerMas">Leer más...</a></p>
+    </div>
+    <div>
+        <a href="{% url 'formStart' %}"><button class="btn-d">Empezar</button></a>
+    </div>
+</section>
+{% endblock %}
