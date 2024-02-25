@@ -25,4 +25,8 @@ urlpatterns = [
     # Forms get started sing in
     path('formStart', views.formStart, name='formStart'),
     path('formSing', views.formSing, name='formSing'),
+    # Mensajes de exito formularios
+    path('citaSuccess', views.citaSuccess, name='citaSuccess'),
+    path('inicioSuccess', views.inicioSuccess, name='inicioSuccess'),
+
 ]

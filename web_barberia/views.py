@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import  HttpResponse
 
 def index(request):
     return render(request, 'index.html', {})
@@ -50,3 +51,17 @@ def formStart(request):
 
 def formSing(request):
     return render(request, 'formSing.html', {})
+
+# Vistas ade los fokrmularios.
+
+def citaSuccess(request):
+    name = request.POST['name']
+    return render(request, 'citaSuccess.html', {"name": name})
+
+def inicioSuccess(request):
+    if request.method != 'POST':
+        return HttpResponse("El metodo GET no est soportado por esta ruta")
+    info = request.POST['info']
+    return render(request, 'inicioSuccess.html', {"info": info})
+    
+    
