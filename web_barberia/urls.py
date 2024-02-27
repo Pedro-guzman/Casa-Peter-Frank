@@ -28,5 +28,5 @@ urlpatterns = [
     # Mensajes de exito formularios
     path('citaSuccess', views.citaSuccess, name='citaSuccess'),
     path('inicioSuccess', views.inicioSuccess, name='inicioSuccess'),
-
+    path('startSuccess', views.startSuccess, name='startSuccess')
 ]

@@ -2,7 +2,8 @@
 {% load static %}
 {% block content %}
 <div class="style-mensaje">
-    <h3>Inicio  de sesión exitoso, Te esperamos {{info}}1</h3>
+    <h3>Inicio  de sesión exitoso! bienvenido {{info}}</h3>
+    <a href="{% url 'index' %}"><button class="btn-d">Volver al inicio</button></a>
 </div>
 {% endblock %}
 

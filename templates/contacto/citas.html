@@ -1,0 +1,61 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+     <!--Formulario de regidstro-->
+     <div class="container" style="width: 500px;">
+        <h3>Agendar cita</h3>
+        
+        <!--Linea divisora-->
+        <div class="separator">
+            <hr>
+            <span>ok</span>
+            <hr>
+        </div>
+        <!--Inicio del formulario-->
+        <form action="{% url 'citaSuccess' %}" method="POST">
+            {% csrf_token %}
+            <div class="section-inputs">
+                <label for="info">
+                    <span>Nombre</span>
+                    <input type="text" id="name" name="name">
+                </label>
+                <!---->
+                <label for="day">
+                    <span>Día</span>
+                    <input type="date" id="day" name="day">
+                </label>
+                <label for="hour">
+                    <span>Hora</span>
+                    <input type="time" id="hour" name="hour">
+                </label>
+            </div>
+            <!--Selección de servicios-->
+            <label for="service">
+                <span>Servicio</span>
+                <select name="service" id="service" style="padding:10px; border-radius: 5px; border: none; background-color: #f3f3f4;">
+                    <option value="corte">Corte desvanecido...desde $160</option>
+                    <option value="tijera">Corte a tijera...desde $170</option>
+                    <option value="barba">Arreglo de barba...desde$160</option>
+                    <option value="contornos">Delineado de contornos...desde$90</option>
+                    <option value="ceja">Arreglo de ceja...desde $90</option>
+                </select>
+            </label>
+            <!---->
+            <label for="email">
+                <span>Email</span>
+                <input type="text" id="email" name="email">
+            </label>
+            <!---->
+            
+            <!---->
+            <label for="checkbox" class="checkbox-label">
+                <input type="checkbox" id="checkbox-label">
+                <span>Acepto</span>
+            </label>
+            <!---->
+            <button type="submit" class="submit-btn">Agendar cita</button>
+        </form>
+
+    </div>
+    <!---->
+{% endblock %}

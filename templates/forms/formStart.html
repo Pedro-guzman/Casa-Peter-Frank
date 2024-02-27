@@ -3,7 +3,7 @@
 {% block content %}
      <!--Formulario de regidstro-->
      <div class="container">
-        <h3>Iniciar sesión</h3>
+        <h3>Registrar</h3>
         <div class="botones">
             <button class="google-btn">
                 <picture><img src="/images/Google__G__Logo.svg.png" alt="Logo de google"></picture>
@@ -20,12 +20,12 @@
             <hr>
         </div>
         <!--Inicio del formulario-->
-        <form action="{% url 'citaSuccess' %}" method="POST">
+        <form action="{% url 'startSuccess' %}" method="POST">
             {% csrf_token %}
             <div class="section-inputs">
-                <label for="info">
+                <label for="name2">
                     <span>Name</span>
-                    <input type="text" id="name" name="name">
+                    <input type="text" id="name2" name="name2">
                 </label>
                 <!---->
                 <label for="username">

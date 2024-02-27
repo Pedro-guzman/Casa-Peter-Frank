@@ -5,52 +5,52 @@ def index(request):
     return render(request, 'index.html', {})
  # Servicios
 def cortes(request):
-    return render(request, 'cortes.html', {})
+    return render(request, 'servicios/cortes.html', {})
 
 def barba(request):
-    return render(request, 'barba.html', {})
+    return render(request, 'servicios/barba.html', {})
 
 def contornos(request):
-    return render(request, 'contornos.html', {})
+    return render(request, 'servicios/contornos.html', {})
 
 def ceja(request):
-    return render(request, 'ceja.html', {})
+    return render(request, 'servicios/ceja.html', {})
 
 def mascarilla(request):
-    return render(request, 'mascarilla.html', {})
+    return render(request, 'servicios/mascarilla.html', {})
 # Productos
 def pomada(request):
-    return render(request, 'pomada.html', {})
+    return render(request, 'productos/pomada.html', {})
 
 def after(request):
-    return render(request, 'after.html', {})
+    return render(request, 'productos/after.html', {})
 
 def shampoo(request):
-    return render(request, 'shampoo.html', {})
+    return render(request, 'productos/shampoo.html', {})
 
 def aceites(request):
-    return render(request, 'aceites.html', {})
+    return render(request, 'productos/aceites.html', {})
 
 def talco(request):
-    return render(request, 'talco.html', {})
+    return render(request, 'productos/talco.html', {})
 # Contacto
 def citas(request):
-    return render(request, 'citas.html', {})
+    return render(request, 'contacto/citas.html', {})
 
 def redes(request):
-    return render(request, 'redes.html', {})
+    return render(request, 'contacto/redes.html', {})
 
 def mensaje(request):
-    return render(request, 'mensaje.html', {})
+    return render(request, 'contacto/mensaje.html', {})
 
 def ubicacion(request):
-    return render(request, 'ubicacion.html', {})
+    return render(request, 'contacto/ubicacion.html', {})
 # Forms get started sing in
 def formStart(request):
-    return render(request, 'formStart.html', {})
+    return render(request, 'forms/formStart.html', {})
 
 def formSing(request):
-    return render(request, 'formSing.html', {})
+    return render(request, 'forms/formSing.html', {})
 
 # Vistas ade los fokrmularios.
 
@@ -64,4 +64,8 @@ def inicioSuccess(request):
     info = request.POST['info']
     return render(request, 'inicioSuccess.html', {"info": info})
     
-    
+def startSuccess(request):
+    if request.method != 'POST':
+        return HttpResponse("El metodo GET no est soportado por esta ruta")
+    name2 = request.POST['name2']
+    return render(request, 'startSuccess.html', {"name2": name2})
