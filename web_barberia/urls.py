@@ -28,5 +28,8 @@ urlpatterns = [
     # Mensajes de exito formularios
     path('citaSuccess', views.citaSuccess, name='citaSuccess'),
     path('inicioSuccess', views.inicioSuccess, name='inicioSuccess'),
-    path('startSuccess', views.startSuccess, name='startSuccess')
+    path('startSuccess', views.startSuccess, name='startSuccess'),
+    # Apartado legal aviso de privacidad y terminos
+    path('termninos/', views.terminos, name='terminos'),
+    path('aviso/', views.aviso, name='aviso')
 ]

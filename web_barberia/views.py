@@ -52,7 +52,7 @@ def formStart(request):
 def formSing(request):
     return render(request, 'forms/formSing.html', {})
 
-# Vistas ade los fokrmularios.
+# Vistas de los formularios.
 
 def citaSuccess(request):
     name = request.POST['name']
@@ -69,3 +69,10 @@ def startSuccess(request):
         return HttpResponse("El metodo GET no est soportado por esta ruta")
     name2 = request.POST['name2']
     return render(request, 'startSuccess.html', {"name2": name2})
+
+# Vistas de parte legal
+def terminos(request):
+    return render(request, 'terminos.html', {})
+
+def aviso(request):
+    return render(request, 'aviso.html', {})
