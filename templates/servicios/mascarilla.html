@@ -2,16 +2,19 @@
 {% load static %}
 {% block content %}
 <section>
-    <div class="cont-img" id="nosotros">
-        <img src="{% static 'img/' %}">
-    </div>
-     <!--texto con descripción -->
-     <div class="overlay-text">
-        <h2>Aplicación de mascarilla negra</h2>
-         <p>Aplicación de mascarilla negra, ideal para exfoliar, remueve puntos negros superficiales y piel muerta..<span id="textoOculto" style="display:none;">Nuestro compromiso es llevarte a los mejores destinos naconales e internacionales, contamos con mas de 20 años de experiencia.</span> <a href="#" id="enlaceLeerMas">Leer más...</a></p>
-    </div>
-    <div>
-        <a href="{% url 'formStart' %}"><button class="btn-d">Empezar</button></a>
+    <div class="cont-serv">
+        <h1>Mascarilla negra</h1>
+        <div class="cont-img" id="nosotros">
+            <img src="{% static 'img/mascarilla.jpeg' %}">
+            
+        </div>
+        <div>
+        <h2>Mascarilla negra</h2>
+         <p>Aplicaciôn de mascarilla exfoliante, elimina puntos negros, piel seca e impurezas superficiales.</p>
+         <div>
+            <a href="{% url 'citas' %}"><button class="btn-d">Agendar cita</button></a>
+        </div>
+        </div>ton></a>
     </div>
 </section>
 {% endblock %}

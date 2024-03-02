@@ -19,9 +19,8 @@ body {
     height: 100%; /* Establece la altura del cuerpo al 100% de la ventana */
 }
 
-/* Estilos generales para las secciones */
 section {
-    height: 100vh; /* Establece la altura de las secciones al 100% del viewport height */
+    min-height: 100vh;
 }
 
 /* Estilos generales para todos los elementos */
@@ -86,7 +85,10 @@ section {
     padding: 0;
     margin: 0;
 }
-
+.arow-icon {
+    margin-left: 10px;
+    color: #eee;
+}
 /*Estilos de las anclas y los elementos de lista del menú oculto*/
 .nav-menu .main-menu li a {
     text-decoration: none;
@@ -188,17 +190,54 @@ i {
 /**/
 /**/
 
-/*Aquí estan los estilos de la seccion de inicio*/
+/* Estilos de imagen de index*/
+.cont-img-index {
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1024px;
+    height: 683px;
+}
+.text-index {
+    width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+}
+/*Aquí estan los estilos de la seccion de cortes*/
+.cont-serv {
+    text-align: center;
+    margin-top: 200px;
+    margin-left: 130px;
+}
 .cont-img {
     position: static;
-    width: 100%;
-    height: 100%;
+    width: 600px;
+    height: 600px;
     overflow: hidden;
+    border-radius: 10px;
+   
 }
-.cont-img img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+
+.cont-img-1 {
+    margin-top: 200px;
+    position: static;
+    width: 564px;
+    height: 705px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.cont-img-2 {
+    margin-top: 200px;
+    position: static;
+    width: 564px;
+    height: 776px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.cortes-text {
+    width: 564px;
 }
 /* Estilos del texto de oantalla de inicio */
 .index-text {
@@ -211,9 +250,9 @@ i {
 }
 /*Estilos de los textos de las imagenes de Productos*/
 .overlay-text {
-    position: absolute;
-    top: 50%; /* Centra verticalmente */
-    left: 50%; /* Centra horizontalmente */
+    width: 400px;
+    margin-left: 800px;
+    margin-top: -220px;
     transform: translate(-50%, -50%); /* Centra completamente */
     background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
     color: white; /* Color del texto */
@@ -221,6 +260,16 @@ i {
     align-items: center;
     text-align: center;
     border-radius: 5px;
+}
+/* Estilos de toexto de servicios*/
+.Text-servicios{
+    width: 400px;
+    margin-left: 700px;
+    margin-top: -220px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    border-radius: 5px;
+    padding: 10px;
+    color: #ddd;
 }
 /* EStilos de color y texto de los productos*/
 .pomada-style {
@@ -236,7 +285,23 @@ i {
     color: orange;
     
 }
+.serum-style {
+    color: rgb(153, 96, 4);
+}
 /* Estilos de redes sociales */
+.style-redes  {
+    margin-top: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 400px;
+    align-items: center;
+    text-align: center;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    padding: 30px;
+    font-size: 30px;
+}
 .style-redes ul li  {
     list-style: none;
     width: 300px;
@@ -244,6 +309,7 @@ i {
     display: flex;
     padding: 20px;
     font-size: 20px;
+    margin: 20px;
 }
 .style-redes ul li a {
     text-decoration: none;
@@ -255,12 +321,15 @@ i {
 }
 .facebook:hover {
     color: rgb(50, 135, 254);
+    
 }
 .instagram:hover {
     color: rgb(255, 132, 0);
+   
 }
 .whatsapp:hover {
-    color: rgb(182, 240, 94);
+    color: rgb(57, 231, 103);
+   
 }
 .text-oculto li a{
     display: none;
@@ -273,7 +342,7 @@ i {
 }
 /*Estilos del boton de destinos*/
 .btn-d{
-    position: absolute;
+    margin: 30px;
     top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);

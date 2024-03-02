@@ -2,12 +2,26 @@
 {% load static %}
 {% block content %}
 <section>
-   
+    <div>
+       
+        <div class="cont-img-index" id="nosotros">
+            <img src="{% static 'img/backgorund.jpg' %}">
+            
+        </div>
      <!--texto con descripción -->
-     <div class="index-text">
+     <div class="text-index">
         <h2>Nosotros</h2>
-         <p>¡Agenda tu cita y descubre la experiencia de tener un momento para ti! <span id="textoOculto" style="display:none;">Nuestro compromiso es llevarte a los mejores destinos naconales e internacionales, contamos con mas de 20 años de experiencia.</span> <a href="#" id="enlaceLeerMas">Leer más...</a></p>
-         <div>
+         <p>
+            
+            Bienvenido a Casa Peter Frank, donde la tradición se encuentra con el estilo moderno. Somos mucho más que una simple barbería; somos un destino donde la elegancia, la atención al detalle y la pasión por el arte de la barbería convergen para ofrecerte una experiencia única.
+            
+            Nuestro equipo de barberos expertos no solo domina las últimas tendencias en cortes de cabello y estilos de barba, sino que también se enorgullece de brindar un servicio personalizado que se adapta a las necesidades y preferencias individuales de cada cliente.
+            
+            En Casa Peter Frank, no solo nos preocupamos por tu apariencia, sino también por tu bienestar. Nuestro ambiente acogedor y relajado te invita a desconectar del ajetreo diario mientras te entregas al cuidado experto de nuestros profesionales.
+            
+            Ya sea que estés buscando un corte clásico, un estilo moderno o un afeitado impecable, estamos aquí para ayudarte a lucir y sentirte lo mejor posible. Ven y descubre por qué somos la elección preferida de aquellos que buscan calidad, estilo y una experiencia de barbería inigualable.
+            </p>
+        </div>
              <a href="{% url 'formStart' %}"><button class="btn-d">Empezar</button></a>
          </div>
     </div>

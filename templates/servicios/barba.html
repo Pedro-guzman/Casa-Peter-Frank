@@ -2,16 +2,40 @@
 {% load static %}
 {% block content %}
 <section>
-    <div class="cont-img" id="nosotros">
-        <img src="{% static 'img/' %}">
-    </div>
-     <!--texto con descripción -->
-     <div class="overlay-text">
+    <div class="cont-serv">
+        <h1>Barba</h1>
+        <div class="cont-img" id="nosotros">
+            <img src="{% static 'img/arreglo-barba.jpeg' %}">
+            
+        </div>
+        <div class="Text-servicios">
         <h2>Arreglo de barba</h2>
-         <p>Incluye: diseño, arreglo y delineado de barba, aplicación de serum, after shave y pomada para estilizar.<span id="textoOculto" style="display:none;">Nuestro compromiso es llevarte a los mejores destinos naconales e internacionales, contamos con mas de 20 años de experiencia.</span> <a href="#" id="enlaceLeerMas">Leer más...</a></p>
-    </div>
-    <div>
-        <a href="{% url 'formStart' %}"><button class="btn-d">Empezar</button></a>
+         <p>Incluye desvanecido de barba, delineado con navaja, aplicacion de preshave, aftershave y pomada para estilizar.</p>
+        </div>
+    
+        <div class="cont-img-1" id="img-barba">
+            <img src="{% static 'img/barba-2.jpeg' %}">
+        </div>
+    
+        <div class="Text-servicios">
+            <h2>Barbay corte</h2>
+             <p>Corte de cabello a tijera realizado con las mejores tecnicas, incluye delineado de contornos con navaja y producto para fijacion de la eleccion del cliente.</p>
+        </div>
+    
+        <div class="cont-img-2" id="nosotros">
+            <img src="{% static 'img/rebajar-Barba.jpeg' %}">
+        </div>
+    
+    
+         <!--texto con descripción -->
+         <div  class="Text-servicios">
+            <h2>Rebajar barba</h2>
+             <p>Rebajar barba con maquina, no incluye desvanecido, delineado ni aplicación de productos.</p>
+        </div>
+
+        <div>
+            <a href="{% url 'citas' %}"><button class="btn-d">Agendar cita</button></a>
+        </div>
     </div>
 </section>
 {% endblock %}
